@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/What_Now.ogg-ddf0460ab3e5583ddbc7ab31dfc9b56b.oggstr"
+
+[deps]
+
+source_file="res://Audio/What_Now.ogg"
+dest_files=[ "res://.import/What_Now.ogg-ddf0460ab3e5583ddbc7ab31dfc9b56b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

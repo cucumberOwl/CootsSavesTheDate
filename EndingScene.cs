@@ -10,7 +10,11 @@ public class EndingScene : Node2D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
+        MusicController mc = GetNode<MusicController>("/root/MusicController");
+        mc.musicPlayer.Stop();
 
+        AudioStreamPlayer audioTrack = GetNode<AudioStreamPlayer>("AudioTrack");
+        audioTrack.VolumeDb = mc.mainVolume;
     }
 
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.

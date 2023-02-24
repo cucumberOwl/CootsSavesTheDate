@@ -8,7 +8,7 @@ public class PlayerController : KinematicBody2D
     private float friction = .1f;
     private float acceleration = .25f;
     private float sensitivity = 0;
-    private Vector2 direction;
+    public Vector2 direction;
     private Vector2 dashVelocity;
 
     public int health = 100;

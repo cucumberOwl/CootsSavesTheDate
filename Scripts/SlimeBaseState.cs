@@ -121,7 +121,7 @@ public class SlimeBaseState : EntityBaseState
         rng.Randomize();
         slime.attack = rng.RandiRange(0, 3);
 
-        if (slime.specials.Count > 0 && slime.attack != 2)
+        if (slime.specials.Count > 0 && slime.attack != 1)
         {
             int index = rng.RandiRange(0, slime.specials.Count - 1);
             slime.attack = slime.specials[index];

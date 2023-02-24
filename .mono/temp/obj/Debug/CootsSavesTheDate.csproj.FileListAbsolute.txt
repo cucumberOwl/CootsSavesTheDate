@@ -7,3 +7,12 @@ C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.AssemblyInfo.cs
 C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.csproj.CoreCompileInputs.cache
 C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.dll
 C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.pdb
+C:\CootSaveTheDate_git\CootsSavesTheDate\.mono\temp\bin\Debug\CootsSavesTheDate.dll
+C:\CootSaveTheDate_git\CootsSavesTheDate\.mono\temp\bin\Debug\CootsSavesTheDate.pdb
+C:\CootSaveTheDate_git\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.csproj.AssemblyReference.cache
+C:\CootSaveTheDate_git\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.GeneratedMSBuildEditorConfig.editorconfig
+C:\CootSaveTheDate_git\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.AssemblyInfoInputs.cache
+C:\CootSaveTheDate_git\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.AssemblyInfo.cs
+C:\CootSaveTheDate_git\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.csproj.CoreCompileInputs.cache
+C:\CootSaveTheDate_git\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.dll
+C:\CootSaveTheDate_git\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.pdb

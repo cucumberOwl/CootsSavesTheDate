@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GotMyPresent.ogg-0f919cc738006cb6e3e5b2f6a1f7d4e6.oggstr"
+
+[deps]
+
+source_file="res://Audio/GotMyPresent.ogg"
+dest_files=[ "res://.import/GotMyPresent.ogg-0f919cc738006cb6e3e5b2f6a1f7d4e6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

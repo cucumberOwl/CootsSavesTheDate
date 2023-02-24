@@ -13,6 +13,7 @@ public class SlimeStateMachine : EntityStateMachine
     private AnimationPlayer animPlayer;
     public Position2D spritePos;
 
+
     public MusicController mc;
 
     public int attack;
@@ -43,15 +44,27 @@ public class SlimeStateMachine : EntityStateMachine
     private bool blink;
     private RandomNumberGenerator rng;
 
+    private bool presentChase;
+
     private List<RatStateMachine> ratMinions;
-    public List<int> specials = new List<int>() { 0, 1, 3 };
+    public List<int> specials = new List<int>() { 0, 3 };
+
+    private Sprite present;
 
     public Node drainPositions;
+
+    private AnimatedSprite lockedDoor;
+    private StaticBody2D doorCollision;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
         player = GetNode<PlayerController>("/root/Node2D/Player");
+        present = GetNode<Sprite>("Present");
+
+        lockedDoor = GetNode<AnimatedSprite>("/root/Node2D/Door");
+        doorCollision = GetNode<StaticBody2D>("/root/Node2D/Door/DoorCollision");
+
         HealthBar = GetNode<ProgressBar>("AnimatedSprite/HealthBar/ProgressBar");
         SlimeAnim = GetNode<AnimatedSprite>("AnimatedSprite");
         Shadow = GetNode<AnimatedSprite>("Shadow");
@@ -80,6 +93,7 @@ public class SlimeStateMachine : EntityStateMachine
 
     public override void _Process(float delta)
     {
+        Chase(delta);
         ZIndex = (int)GlobalPosition.y;
         CurrentState.UpdateState(delta);
         if (damageEffect > 0)
@@ -230,8 +244,39 @@ public class SlimeStateMachine : EntityStateMachine
     {
         if (name == "Present")
         {
-            GetTree().ChangeScene("res://EndingScene.tscn");
-            mc.play_menu_music();
+            presentChase = true;
+            doorCollision.CollisionLayer = 6;
+            lockedDoor.Play("unlocked");
         }
+    }
+
+    private float chaseTimer = 0.03f;
+
+    private void Chase(float delta)
+    {
+        if (!presentChase)
+            return;
+
+        Vector2 dest = getPresentPos();
+        float dist = present.GlobalPosition.DistanceTo(dest);
+        Vector2 dir = (dest - present.GlobalPosition).Normalized();
+        if (chaseTimer <= 0)
+        {
+            float x = present.GlobalPosition.x + (dir.x * (dist / 4));
+            float y = present.GlobalPosition.y + (dir.y * (dist / 4));
+            present.GlobalPosition = new Vector2(x, y);
+            chaseTimer = 0.03f;
+        }
+        chaseTimer -= delta;
+
+    }
+
+    private Vector2 getPresentPos()
+    {
+        Vector2 result = player.GlobalPosition;
+        result.x += (player.direction.x * -1) * 10;
+        result.y += (player.direction.y * -1) * 10;
+
+        return result;
     }
 }

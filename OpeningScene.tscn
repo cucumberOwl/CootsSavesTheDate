@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://parallax_mountain_pack/layers/parallax-mountain-bg2.png" type="Texture" id=1]
 [ext_resource path="res://parallax_mountain_pack/layers/parallax-mountain-foreground-trees.png" type="Texture" id=2]
@@ -12,6 +12,12 @@
 [ext_resource path="res://Main/UI/present.png" type="Texture" id=10]
 [ext_resource path="res://parallax_mountain_pack/layers/parallax-mountain-bg.png" type="Texture" id=11]
 [ext_resource path="res://OpeningScene.cs" type="Script" id=12]
+[ext_resource path="res://Audio/vespasound.mp3" type="AudioStream" id=13]
+[ext_resource path="res://Audio/Nooooo.ogg" type="AudioStream" id=14]
+[ext_resource path="res://Audio/What_Now.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Audio/meow2.mp3" type="AudioStream" id=16]
+[ext_resource path="res://Audio/Cooooot.ogg" type="AudioStream" id=17]
+[ext_resource path="res://OpeningAudio.cs" type="Script" id=18]
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 9 )
@@ -53,7 +59,7 @@ animations = [ {
 
 [sub_resource type="Animation" id=6]
 resource_name = "CutScene"
-length = 18.0
+length = 19.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite3:position")
 tracks/0/interp = 1
@@ -85,7 +91,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2, 2.2, 2.4, 2.6, 2.8, 3, 4, 4.4, 4.9, 5, 6.3, 7.2, 12.8, 12.9, 13, 13.1, 13.4, 14.7, 15.5, 16 ),
+"times": PoolRealArray( 0, 2, 2.2, 2.4, 2.6, 2.8, 3, 4, 4.4, 4.9, 5, 6.3, 7.2, 13.7, 13.8, 13.9, 14, 14.3, 15.9, 16.2, 16.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -731, 789 ), Vector2( 562, 792 ), Vector2( 587, 795 ), Vector2( 611, 794 ), Vector2( 630, 791 ), Vector2( 650, 788 ), Vector2( 679, 789 ), Vector2( 927, 791 ), Vector2( 973, 789 ), Vector2( 973, 790 ), Vector2( 907, 790 ), Vector2( 907, 790 ), Vector2( 737, 792 ), Vector2( 737, 792 ), Vector2( 730, 790 ), Vector2( 710, 791 ), Vector2( 690, 805 ), Vector2( 658, 850 ), Vector2( 658, 850 ), Vector2( 596, 852 ), Vector2( 572, 864 ) ]
@@ -169,7 +175,7 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 7.4, 7.6, 7.7, 7.8, 7.9, 8.9, 9, 11, 11.1, 14.2, 14.3, 16, 16.1 ),
+"times": PoolRealArray( 7.4, 7.6, 7.7, 7.8, 7.9, 8.9, 9, 11.9, 12, 15.8, 15.9, 16.7, 16.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 746, 713 ), Vector2( 747, 707 ), Vector2( 755, 714 ), Vector2( 747, 716 ), Vector2( 753, 714 ), Vector2( 753, 714 ), Vector2( 327, 697 ), Vector2( 327, 697 ), Vector2( 174, 700 ), Vector2( 174, 700 ), Vector2( 613, 772 ), Vector2( 613, 772 ), Vector2( 638, 702 ) ]
@@ -181,7 +187,7 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 8.8, 8.9, 9, 10.9, 11, 11.1, 14.1, 14.2, 14.3, 15.5, 15.6, 16, 16.2 ),
+"times": PoolRealArray( 8.8, 8.9, 9, 11.8, 11.9, 12, 15.7, 15.8, 15.9, 16.2, 16.3, 16.7, 16.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ "NO!!!", "", "Coots, That is a present for QT!", "Coots, That is a present for QT!", "", "What am i going to do? I'm going to be late for my date!", "What am i going to do? I'm going to be late for my date!", "", "MEOW", "MEOW", "", "", "Coots!?!?!" ]
@@ -193,7 +199,7 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 12.8, 12.9, 13.4, 13.5, 14.7, 14.8 ),
+"times": PoolRealArray( 13.7, 13.8, 14.3, 14.4, 15.9, 16 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ "default", "jump", "jump", "default", "default", "walk" ]
@@ -205,7 +211,7 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 12.8, 12.9, 13.1, 13.4, 15.5, 16 ),
+"times": PoolRealArray( 13.7, 13.8, 14, 14.3, 16.2, 16.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 15.5, -31.0, 0.0, 0.0, -77.4 ]
@@ -217,7 +223,7 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 15.5, 16 ),
+"times": PoolRealArray( 16.2, 16.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -229,10 +235,36 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 17, 18 ),
+"times": PoolRealArray( 17.7, 18.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "audio"
+tracks/15/path = NodePath("AudioTrack")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 14 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 15 )
+}, {
+"end_offset": 0.82,
+"start_offset": 0.0,
+"stream": ExtResource( 16 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 17 )
+} ],
+"times": PoolRealArray( 7.1, 9, 15.8, 16.7 )
 }
 
 [sub_resource type="Animation" id=7]
@@ -417,14 +449,31 @@ tracks/14/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
+tracks/15/type = "value"
+tracks/15/path = NodePath("AudioTrack:autoplay")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 18 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( -766, 810.5 )
 scale = Vector2( 1.59375, 1.59375 )
 z_index = 2
 texture = ExtResource( 8 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2"]
+stream = ExtResource( 13 )
+autoplay = true
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( -820, 802 )
@@ -510,6 +559,9 @@ margin_right = 138.0
 margin_bottom = -8.0
 theme = ExtResource( 6 )
 text = "Skip"
+
+[node name="AudioTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_finished"]
 [connection signal="pressed" from="CanvasLayer/Button" to="AnimationPlayer" method="_on_skip"]

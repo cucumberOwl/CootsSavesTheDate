@@ -58,6 +58,7 @@ public class MainMenu : Control
     {
         fade.Visible = true;
         animPlayer.Play("fade_to_black");
+        mc.musicPlayer.Stop();
     }
 
     public void _on_animation_finished(string name)

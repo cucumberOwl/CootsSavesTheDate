@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/vespasound.mp3-ec6c6a2aaa5db87058169e71e0b498d5.mp3str"
+
+[deps]
+
+source_file="res://Audio/vespasound.mp3"
+dest_files=[ "res://.import/vespasound.mp3-ec6c6a2aaa5db87058169e71e0b498d5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

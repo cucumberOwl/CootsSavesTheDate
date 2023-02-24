@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CootsSavesTheDate\\CootsSavesTheDate.csproj",
+      "projectUniqueName": "C:\\CootSaveTheDate_git\\CootsSavesTheDate\\CootsSavesTheDate.csproj",
       "projectName": "CootsSavesTheDate",
-      "projectPath": "C:\\CootsSavesTheDate\\CootsSavesTheDate.csproj",
+      "projectPath": "C:\\CootSaveTheDate_git\\CootsSavesTheDate\\CootsSavesTheDate.csproj",
       "packagesPath": "C:\\Users\\Travis\\.nuget\\packages\\",
-      "outputPath": "C:\\CootsSavesTheDate\\.mono\\temp\\obj\\",
+      "outputPath": "C:\\CootSaveTheDate_git\\CootsSavesTheDate\\.mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Travis\\AppData\\Roaming\\NuGet\\NuGet.Config",

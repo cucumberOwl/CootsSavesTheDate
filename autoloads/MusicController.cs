@@ -7,7 +7,7 @@ public class MusicController : Node
     private AudioStream main_music;
     private AudioStream boss_music;
 
-    private AudioStreamPlayer musicPlayer;
+    public AudioStreamPlayer musicPlayer;
     private AudioStreamPlayer swipe1;
     private AudioStreamPlayer swipe2;
     private bool swipeTracker;
