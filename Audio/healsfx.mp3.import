@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/healsfx.mp3-a4d2e9680b18e1acad29e5366bdb74fc.mp3str"
+
+[deps]
+
+source_file="res://Audio/healsfx.mp3"
+dest_files=[ "res://.import/healsfx.mp3-a4d2e9680b18e1acad29e5366bdb74fc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

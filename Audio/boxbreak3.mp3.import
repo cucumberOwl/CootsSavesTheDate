@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/boxbreak3.mp3-52dac55607ff4ddbfef3810748754059.mp3str"
+
+[deps]
+
+source_file="res://Audio/boxbreak3.mp3"
+dest_files=[ "res://.import/boxbreak3.mp3-52dac55607ff4ddbfef3810748754059.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

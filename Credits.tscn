@@ -1,0 +1,112 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://8BitFont.tres" type="Theme" id=1]
+
+[node name="Credits" type="Sprite"]
+position = Vector2( 1094, -3068 )
+z_index = 100
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0.941176 )
+margin_left = -1750.0
+margin_top = -102.0
+margin_right = 2250.0
+margin_bottom = 2398.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Text Scale" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
+
+[node name="Label" type="Label" parent="Text Scale"]
+margin_left = -11.3333
+margin_top = -17.6668
+margin_right = 222.667
+margin_bottom = 44.3332
+theme = ExtResource( 1 )
+text = "Credits"
+
+[node name="CucumberOwl" type="Label" parent="Text Scale"]
+margin_left = -95.0
+margin_top = 118.0
+margin_right = 328.0
+margin_bottom = 180.0
+theme = ExtResource( 1 )
+text = "CucumberOwl"
+
+[node name="Sprite" type="Sprite" parent="Text Scale"]
+position = Vector2( 24, 8.33337 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Label2" type="Label" parent="Text Scale/Sprite"]
+margin_left = -280.333
+margin_top = 69.0
+margin_right = 509.667
+margin_bottom = 131.0
+theme = ExtResource( 1 )
+text = "Design And Programming"
+
+[node name="Doug" type="Label" parent="Text Scale"]
+margin_left = -91.0
+margin_top = 258.667
+margin_right = 332.0
+margin_bottom = 320.667
+theme = ExtResource( 1 )
+text = "devthedoug"
+
+[node name="Sprite2" type="Sprite" parent="Text Scale"]
+position = Vector2( -17.6667, 152.667 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Label2" type="Label" parent="Text Scale/Sprite2"]
+margin_left = -249.048
+margin_top = 69.0476
+margin_right = 540.952
+margin_bottom = 131.048
+theme = ExtResource( 1 )
+text = "Music/sfx And Playtesting"
+
+[node name="Sprite3" type="Sprite" parent="Text Scale"]
+position = Vector2( 39.3333, 284.333 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Label2" type="Label" parent="Text Scale/Sprite3"]
+margin_left = -842.857
+margin_top = 20.4761
+margin_right = -52.8572
+margin_bottom = 82.4761
+theme = ExtResource( 1 )
+text = "Free Assets"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FreeAssets" type="Sprite" parent="Text Scale"]
+position = Vector2( -90, 345.333 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Label2" type="Label" parent="Text Scale/FreeAssets"]
+margin_left = -1092.5
+margin_top = -0.833418
+margin_right = 1769.5
+margin_bottom = 1101.17
+theme = ExtResource( 1 )
+text = "coots (edited): Deebs |  https://forums.rpgmakerweb.com/index.php?threads/
+                                   deebs-zelda-monster-and-other-fine-resources.27422/
+				
+sewer tileset: kingkelp | https://kingkelp.itch.io/sewer-tileset
+
+rat: Calciumtrice |  https://opengameart.org/content/animated-rat-and-bat
+
+boss (edited): redblueyellow | https://www.spriters-resource.com/ds_dsi/
+                                            pokemonmysterydungeonexplorersoftimedarkness/
+											                                            sheet/26237/
+																						
+																						backgrounds:  ansimuz | https://ansimuz.itch.io/mountain-dusk-parallax-background
+
+swipe+ bidet (edited): https://opengameart.org/content/public-toilet-tileset
+flush sound: https://fromnoisetosound.com/household/18375-toilet-flush.html
+
+coins: laredgames | https://laredgames.itch.io/gems-coins-free"
+__meta__ = {
+"_edit_use_anchors_": true
+}

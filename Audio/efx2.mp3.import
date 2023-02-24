@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/efx2.mp3-09751157e67dbc8c23255681a12870b0.mp3str"
+
+[deps]
+
+source_file="res://Audio/efx2.mp3"
+dest_files=[ "res://.import/efx2.mp3-09751157e67dbc8c23255681a12870b0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

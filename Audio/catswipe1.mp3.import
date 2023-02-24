@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/catswipe1.mp3-420ee721617aee87c1612e128b539eda.mp3str"
+
+[deps]
+
+source_file="res://Audio/catswipe1.mp3"
+dest_files=[ "res://.import/catswipe1.mp3-420ee721617aee87c1612e128b539eda.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

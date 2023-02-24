@@ -1,0 +1,142 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Main/UI/healthBar.png" type="Texture" id=1]
+[ext_resource path="res://HUD.cs" type="Script" id=2]
+[ext_resource path="res://8BitFont.tres" type="Theme" id=3]
+[ext_resource path="res://Main/UI/MonedaD.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.313726, 0.290196, 0.392157, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.129412, 0.439216, 0.262745, 1 )
+
+[sub_resource type="Theme" id=3]
+ProgressBar/styles/bg = SubResource( 1 )
+ProgressBar/styles/fg = SubResource( 2 )
+
+[sub_resource type="StyleBoxLine" id=5]
+color = Color( 1, 1, 1, 1 )
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id=7]
+color = Color( 1, 1, 1, 1 )
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id=6]
+thickness = 10
+
+[sub_resource type="Theme" id=8]
+HSlider/styles/grabber_area = SubResource( 5 )
+HSlider/styles/grabber_area_highlight = SubResource( 7 )
+HSlider/styles/slider = SubResource( 6 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 4 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 4 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="HealthBar" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="HealthBar"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 13.0
+margin_top = -69.0
+margin_right = 167.0
+margin_bottom = -19.0
+texture = ExtResource( 1 )
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthBar/TextureRect"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = -34.0
+margin_right = 150.0
+margin_bottom = -16.0
+theme = SubResource( 3 )
+value = 100.0
+percent_visible = false
+
+[node name="Volume" type="Sprite" parent="HealthBar/TextureRect"]
+modulate = Color( 1, 1, 1, 0.54902 )
+position = Vector2( 99, 61 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Label" type="Label" parent="HealthBar/TextureRect/Volume"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -490.0
+margin_top = -76.0
+margin_right = -9.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 100 )
+theme = ExtResource( 3 )
+text = "Volume"
+align = 1
+valign = 2
+
+[node name="HSlider" type="HSlider" parent="HealthBar/TextureRect/Volume/Label"]
+margin_left = 372.0
+margin_top = 58.0
+margin_right = 672.0
+margin_bottom = 88.0
+rect_min_size = Vector2( 300, 30 )
+theme = SubResource( 8 )
+min_value = -50.0
+max_value = 15.0
+step = 0.5
+value = -5.0
+
+[node name="Coins" type="AnimatedSprite" parent="HealthBar/TextureRect"]
+position = Vector2( 250, 25 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 14 )
+
+[node name="Count" type="Node2D" parent="HealthBar/TextureRect/Coins"]
+position = Vector2( 8, 1 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Label" type="Label" parent="HealthBar/TextureRect/Coins/Count"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.5
+margin_top = -69.5
+margin_right = 489.5
+margin_bottom = 30.5
+rect_min_size = Vector2( 0, 100 )
+theme = ExtResource( 3 )
+text = "0 / 0"
+valign = 2
+
+[connection signal="value_changed" from="HealthBar/TextureRect/Volume/Label/HSlider" to="." method="_on_volume_changed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ratdyingsfx.mp3-ee4f63e4dbba8b5caebf0d739f0e1e34.mp3str"
+
+[deps]
+
+source_file="res://Audio/ratdyingsfx.mp3"
+dest_files=[ "res://.import/ratdyingsfx.mp3-ee4f63e4dbba8b5caebf0d739f0e1e34.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

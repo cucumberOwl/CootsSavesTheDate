@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/catgamesludgesounds.mp3-c2d6e244dd188d2c25aaa0f822be7f44.mp3str"
+
+[deps]
+
+source_file="res://Audio/catgamesludgesounds.mp3"
+dest_files=[ "res://.import/catgamesludgesounds.mp3-c2d6e244dd188d2c25aaa0f822be7f44.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/travcatgamev2.mp3-328bde359bdd84124ed271eb519d35e5.mp3str"
+
+[deps]
+
+source_file="res://Audio/travcatgamev2.mp3"
+dest_files=[ "res://.import/travcatgamev2.mp3-328bde359bdd84124ed271eb519d35e5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

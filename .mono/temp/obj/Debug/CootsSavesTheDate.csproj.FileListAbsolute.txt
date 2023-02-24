@@ -1,0 +1,9 @@
+C:\CootsSavesTheDate\.mono\temp\bin\Debug\CootsSavesTheDate.dll
+C:\CootsSavesTheDate\.mono\temp\bin\Debug\CootsSavesTheDate.pdb
+C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.csproj.AssemblyReference.cache
+C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.GeneratedMSBuildEditorConfig.editorconfig
+C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.AssemblyInfoInputs.cache
+C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.AssemblyInfo.cs
+C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.csproj.CoreCompileInputs.cache
+C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.dll
+C:\CootsSavesTheDate\.mono\temp\obj\Debug\CootsSavesTheDate.pdb
