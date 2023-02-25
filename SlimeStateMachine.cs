@@ -53,6 +53,8 @@ public class SlimeStateMachine : EntityStateMachine
 
     public Node drainPositions;
 
+    public Node2D HealthBarCont;
+
     private AnimatedSprite lockedDoor;
     private StaticBody2D doorCollision;
 
@@ -65,7 +67,9 @@ public class SlimeStateMachine : EntityStateMachine
         lockedDoor = GetNode<AnimatedSprite>("/root/Node2D/Door");
         doorCollision = GetNode<StaticBody2D>("/root/Node2D/Door/DoorCollision");
 
-        HealthBar = GetNode<ProgressBar>("AnimatedSprite/HealthBar/ProgressBar");
+        HealthBarCont = GetNode<Node2D>("/root/Node2D/HealthBar");
+        HealthBar = GetNode<ProgressBar>("/root/Node2D/HealthBar/Bar/ProgressBar");
+
         SlimeAnim = GetNode<AnimatedSprite>("AnimatedSprite");
         Shadow = GetNode<AnimatedSprite>("Shadow");
         animPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
@@ -82,7 +86,6 @@ public class SlimeStateMachine : EntityStateMachine
         HealthBar.MaxValue = health;
         HealthBar.MinValue = 0;
         HealthBar.Value = health;
-        HealthBar.Visible = false;
 
         ratMinions = new List<RatStateMachine>();
 
@@ -202,7 +205,7 @@ public class SlimeStateMachine : EntityStateMachine
 
     public void HideBits()
     {
-        HealthBar.Visible = false;
+        //HealthBar.Visible = false;
         Shadow.Visible = false;
     }
 
@@ -251,6 +254,7 @@ public class SlimeStateMachine : EntityStateMachine
     }
 
     private float chaseTimer = 0.03f;
+    private float scale = 1;
 
     private void Chase(float delta)
     {
@@ -266,9 +270,13 @@ public class SlimeStateMachine : EntityStateMachine
             float y = present.GlobalPosition.y + (dir.y * (dist / 4));
             present.GlobalPosition = new Vector2(x, y);
             chaseTimer = 0.03f;
+            HealthBarCont.Scale = new Vector2(scale, scale);
         }
         chaseTimer -= delta;
-
+        if (scale > 0)
+            scale -= delta;
+        else
+            scale = 0;
     }
 
     private Vector2 getPresentPos()

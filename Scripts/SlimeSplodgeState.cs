@@ -52,7 +52,7 @@ public class SlimeSplodgeState : SlimeBaseState
                 slime.GetNode<AnimatedSprite>("AnimatedSprite").Frame = 2;
                 slime.MoveAndSlide(dir * slime.attackSpeed, Vector2.Up);
 
-                if (slime.GlobalPosition.DistanceTo(destination) <= 5)
+                if (slime.GlobalPosition.DistanceTo(destination) <= 2)
                 {
                     attacking = false;
                     slime.GetNode<AnimatedSprite>("AnimatedSprite").Play("sink");
